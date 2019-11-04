@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="name"
-                       value="<?php echo isset($_POST['name']) ? $_POST['name'] : $category['Name'];?>"
+                       value="<?php echo isset($_POST['name']) ? $_POST['name'] : $category['name'];?>"
                        class="form-control"/>
             </div>
             
@@ -27,10 +27,10 @@
                 
                 <label>Status</label>
                 <select name="status" class="form-control">
-                    <option <?php echo $category['Status'] == 1 ?'selected':""; ?> value="1">
+                    <option <?php echo $category['status'] == 1 ?'selected':""; ?> value="1">
                         Enabled
                     </option>
-                    <option <?php echo $category['Status'] == 0 ?'selected':""; ?> value="0">
+                    <option <?php echo $category['status'] == 0 ?'selected':""; ?> value="0">
                         Disabled
                     </option>
                 </select>

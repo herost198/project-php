@@ -31,17 +31,17 @@
                 <?php foreach ($categories as $category): ?>
                     <tr>
                         <td>
-                            <?php echo $category['Id']; ?>
+                            <?php echo $category['id']; ?>
                         </td>
                         <td>
-                            <?= $category['Name']; ?>
+                            <?= $category['name']; ?>
                         </td>
                         <td>
-                            <?php echo $category['Status'] == '1' ?   "Actived" : "Disabled" ; ?>
+                            <?php echo $category['status'] == '1' ?   "Actived" : "Disabled" ; ?>
                         </td>
                         <td>
                             <?php
-                            $urlUpdate = 'index.php?controller=home&action=update&id=' . $category['Id'];
+                            $urlUpdate = 'index.php?controller=home&action=update&id=' . $category['id'];
                             ?>
                            
                             <a href="<?php echo $urlUpdate?>">

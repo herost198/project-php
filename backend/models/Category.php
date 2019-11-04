@@ -20,10 +20,13 @@ class Category extends Model
     function insert($category = [])
     {
         $conn = $this->db_connect();
-        $queryInsert = "INSERT into categories (`Id`,`Name`)
-            VALUES('{$category['Id']}', 
-            '{$category['Name']}')";
-
+        $queryInsert = "INSERT into categories (`id`,`name`,`status`)
+            VALUES(
+                '{$category['id']}', 
+            '{$category['name']}',
+            '{$category['status']}'
+            
+            )";
         $isInsert = mysqli_query($conn, $queryInsert);
         $this->db_close($conn);
 
@@ -35,7 +38,7 @@ class Category extends Model
     {
         $conn = $this->db_connect();
         $id = $this->escapeParam($conn, $id);
-        $querySelect = "SELECT * from  categories where Id = '$id' ";
+        $querySelect = "SELECT * from  categories where id = '$id' ";
         $result = mysqli_query($conn, $querySelect);
         $category = [];
         if (mysqli_num_rows($result) == 1) {
@@ -52,9 +55,9 @@ class Category extends Model
     public function update($category = [])
     {
         $conn = $this->db_connect();
-        $id  = $this->escapeParam($conn,$category['Id']);
-        $name  = $this->escapeParam($conn,$category['Name']);
-        $status  = $this->escapeParam($conn,$category['Status']);
+        $id  = $this->escapeParam($conn,$category['id']);
+        $name  = $this->escapeParam($conn,$category['name']);
+        $status  = $this->escapeParam($conn,$category['status']);
         
         $queryUpdate = "UPDATE categories 
           SET `Name` = '$name',`Status`='$status'

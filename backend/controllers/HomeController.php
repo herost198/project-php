@@ -15,7 +15,7 @@ class HomeController extends Controller
         //xử lý khi người dùng submit form
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
-
+            $status = $_POST['status'];
             if (empty($name)) {
                 $_SESSION['error'] = 'Name không được để trống';
                 require_once 'views/categories/create.php';
@@ -23,9 +23,9 @@ class HomeController extends Controller
             }
 
             $category = [
-                // 'Id' =>  substr(rand(), 0, 4),
-                'Id' =>  $this->generateId(),
-                'Name' => $name,
+                'id' =>  $this->generateId(),
+                'name' => $name,
+                'status'=>$status
             ];
 
             $categoryModel = new Category();
@@ -67,9 +67,9 @@ class HomeController extends Controller
             }
 
             $category = [
-                'Id' => $id,
-                'Name' => $name,
-                'Status'=>$status
+                'id' => $id,
+                'name' => $name,
+                'status'=>$status
             ];
             
             $categoryModel = new Category();

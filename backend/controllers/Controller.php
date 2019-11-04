@@ -1,7 +1,7 @@
 <?php
 class Controller
 {
-    public $pageTitle = "Title của trang";
+    // public $pageTitle = "Title của trang";
 
     public function __construct()
     {
@@ -16,6 +16,7 @@ class Controller
     {
         return substr(rand(), 0, 4);
     }
+    
     public function validate($param, $message)
     {
         if (empty($param)) {

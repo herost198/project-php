@@ -11,10 +11,12 @@ class Model
 
         return $conn;
     }
+    
     function db_close($conn)
     {
         mysqli_close($conn);
     }
+
     function db_query($conn, $query)
     {
         $result = mysqli_query($conn, $query);

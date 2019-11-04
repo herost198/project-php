@@ -4,13 +4,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Dashboard
-            <small>Control panel</small>
+            Danh mục sản phẩm
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-        </ol>
+
     </section>
 
     <!-- Main content -->
@@ -18,15 +14,25 @@
         <form method="POST" action="" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : '';?>" class="form-control"/>
+                <input type="text" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>" class="form-control" />
             </div>
-            
             <div class="form-group">
-                <input type="submit" name="submit"
-                       class="btn btn-success" value="Save"/>
-                <a href="index.php?controller=home&action=index"
-                   class="btn btn-secondary">Cancel</a>
+
+                <label>Status</label>
+                <select name="status" class="form-control">
+                    <option <?php echo isset($_POST['status']) && "1" == $_POST['category_id'] ? "selected" : "" ?> value="1">
+                        Enabled
+                    </option>
+                    <option <?php echo isset($_POST['status']) && "0" == $_POST['category_id'] ? "selected" : "" ?> value="0">
+                        Disabled
+                    </option>
+                </select>
             </div>
+            <div class="form-group">
+                <input type="submit" name="submit" class="btn btn-success" value="Save" />
+                <a href="index.php?controller=home&action=index" class="btn btn-secondary">Cancel</a>
+            </div>
+
         </form>
     </section>
     <!-- /.content -->
