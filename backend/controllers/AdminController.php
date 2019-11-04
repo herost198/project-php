@@ -5,6 +5,7 @@ require_once 'models/Admin.php';
 
 class AdminController extends Controller
 {
+    
     function login()
     {
         // trường hợp đã đăng nhập thì tự động chuyển hướng sang Danh Sách Home

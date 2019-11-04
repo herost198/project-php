@@ -4,6 +4,7 @@
 require_once 'Model.php';
 class Category extends Model
 {
+    
     function getAllCategory()
     {
         $conn = $this->db_connect();

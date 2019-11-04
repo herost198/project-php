@@ -4,6 +4,7 @@ require_once 'controllers/Controller.php';
 require_once __DIR__ . '/../models/Category.php';
 class HomeController extends Controller
 {
+
     function index()
     {
         $categoryModel = new Category();

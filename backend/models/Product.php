@@ -6,7 +6,7 @@ class Product extends Model
     function getAllProduct()
     {
         $conn = $this->db_connect();
-        $querySelect = "SELECT products.*, categories.name as Category_name from products inner join categories on categories.id = products.CategoryId";
+        $querySelect = "SELECT products.*, categories.name as category_name from products inner join categories on categories.id = products.category_id";
         $results = mysqli_query($conn, $querySelect);
         $products = [];
         if (mysqli_num_rows($results) > 0) {

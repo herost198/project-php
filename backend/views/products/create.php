@@ -20,8 +20,8 @@
                 <select class="form-control" name="category_id">
                     <?php if (!empty($categories)) : ?>
                         <?php foreach ($categories as $category) : ?>
-                            <option value="<?php echo $category['Id'] ?>" <?php echo isset($_POST['category_id']) && $category['Id'] == $_POST['category_id'] ? "selected=true" : null ?>>
-                                <?php echo $category['Name'] ?>
+                            <option value="<?php echo $category['id'] ?>" <?php echo isset($_POST['category_id']) && $category['id'] == $_POST['category_id'] ? "selected=true" : null ?>>
+                                <?php echo $category['name'] ?>
                             </option>
                         <?php endforeach; ?>
                     <?php endif; ?>

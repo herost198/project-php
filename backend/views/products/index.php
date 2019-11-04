@@ -35,32 +35,32 @@
             <?php foreach ($products as $product): ?>
                   <tr>
                       <td>
-                        <?php echo $product['Id']; ?>
+                        <?php echo $product['id']; ?>
                       </td>
                       <td>
-                        <?php echo $product['Category_name']; ?>
+                        <?php echo $product['category_name']; ?>
                       </td>
                       <td>
-                        <?php echo $product['Name']; ?>
+                        <?php echo $product['name']; ?>
                       </td>
                       <td>
-                          <?php echo number_format($product['Price']); ?>VNĐ
+                          <?php echo number_format($product['price']); ?>VNĐ
                       </td>
                       <td>
                         <?php if (!empty($product['image'])): ?>
-                            <img src="assets/uploads/<?php echo $product['avatar'] ?>"
+                            <img src="assets/uploads/<?php echo $product['image'] ?>"
                                  width="80px"/>
                         <?php endif; ?>
                       </td>
                       <td>
-                        <?php echo $product['Status'] == '1' ?   "Actived" : "Disabled" ; ?>
+                        <?php echo $product['status'] == '1' ?   "Actived" : "Disabled" ; ?>
                       </td>
                       
                       <td>
                         <?php
-                        $urlDetail = 'index.php?controller=product&action=detail&id=' . $product['Id'];
-                        $urlUpdate = 'index.php?controller=product&action=update&id=' . $product['Id'];
-                        $urlDelete = 'index.php?controller=product&action=delete&id=' . $product['Id'];
+                        $urlDetail = 'index.php?controller=product&action=detail&id=' . $product['id'];
+                        $urlUpdate = 'index.php?controller=product&action=update&id=' . $product['id'];
+                        $urlDelete = 'index.php?controller=product&action=delete&id=' . $product['id'];
                         ?>
                           <a href="<?php echo $urlDetail ?>">
                               <span class="fa fa-eye"></span>

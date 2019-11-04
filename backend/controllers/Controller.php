@@ -1,7 +1,7 @@
 <?php
 class Controller
 {
-    // public $pageTitle = "Title của trang";
+    public $pageTitle = "Title của trang";
 
     public function __construct()
     {
