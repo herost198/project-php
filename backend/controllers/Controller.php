@@ -11,4 +11,16 @@ class Controller
             exit();
         }
     }
+
+    public function generateId()
+    {
+        return substr(rand(), 0, 4);
+    }
+    public function validate($param, $message)
+    {
+        if (empty($param)) {
+            return $message;
+        }
+        return '';
+    }
 }

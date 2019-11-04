@@ -24,7 +24,7 @@
             <div class="form-group">
                 <input type="submit" name="submit"
                        class="btn btn-success" value="Save"/>
-                <a href="index.php?controller=category&action=index"
+                <a href="index.php?controller=home&action=index"
                    class="btn btn-secondary">Cancel</a>
             </div>
         </form>

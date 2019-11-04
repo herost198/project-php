@@ -103,7 +103,7 @@
                                 </span>
                             </a>
                         </li>
-                        
+
                         <li>
                             <a href="index.php?controller=product&action=index">
                                 <i class="fa fa-product-hunt"></i> <span>Quản lý sản phẩm</span>
@@ -133,7 +133,8 @@
                                 unset($_SESSION['error']);
                                 ?>
                     </div>
-                <?php endif; ?>
+                <?php endif; ?> 
+               
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="alert alert-success" role="alert">
                         <?php

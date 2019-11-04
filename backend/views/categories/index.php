@@ -23,8 +23,9 @@
         <table class="table table-bordered">
             <tr>
                 <th>ID</th>
-                <th>Ation</th>
+                <th>Name</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr>
             <?php if (!empty($categories)): ?>
                 <?php foreach ($categories as $category): ?>
@@ -36,7 +37,7 @@
                             <?= $category['Name']; ?>
                         </td>
                         <td>
-                            <?php echo $category['Status'] == '1' ?   "Active" : "Disabled" ; ?>
+                            <?php echo $category['Status'] == '1' ?   "Actived" : "Disabled" ; ?>
                         </td>
                         <td>
                             <?php

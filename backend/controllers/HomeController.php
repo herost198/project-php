@@ -23,7 +23,8 @@ class HomeController extends Controller
             }
 
             $category = [
-                'Id' =>  substr(rand(), 0, 4),
+                // 'Id' =>  substr(rand(), 0, 4),
+                'Id' =>  $this->generateId(),
                 'Name' => $name,
             ];
 

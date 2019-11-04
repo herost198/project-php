@@ -35,7 +35,7 @@ class Category extends Model
     {
         $conn = $this->db_connect();
         $id = $this->escapeParam($conn, $id);
-        $querySelect = "SELECT * from  categories where Id = $id ";
+        $querySelect = "SELECT * from  categories where Id = '$id' ";
         $result = mysqli_query($conn, $querySelect);
         $category = [];
         if (mysqli_num_rows($result) == 1) {

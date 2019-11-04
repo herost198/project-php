@@ -1,9 +1,10 @@
 <?php
 session_start();
-
+// $_SESSION['admin'] = ['username'=>'admin'];
 $controller = isset($_GET['controller']) ? $_GET['controller'] : 'Home';
+$controller = ucfirst($controller);  
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
-
+ 
 $controllerClass = $controller . 'Controller';
 
 $pathController = 'controllers/' . $controllerClass . ".php";
